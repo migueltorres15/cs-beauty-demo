@@ -14,15 +14,16 @@
   --cream-dark:  #DDD0C0;
   --dark:        #1A1614;
   --brown:       #2C1A14;
-  --rose:        #8B3A52;
-  --rose-hover:  #A04462;
+  --rose:        #6e041d;
+  --rose-hover:  #8f0526;
   --gold:        #C09270;
   --gold-light:  #D4B08A;
   --muted:       #7A6558;
   --border:      rgba(26, 22, 20, .10);
 
   --font-serif:  'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-  --font-sans:   'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-sans:   'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-label:  'Montserrat', 'Be Vietnam Pro', sans-serif;
 
   --nav-h:       72px;
   --ease-out:    cubic-bezier(.22, 1, .36, 1);
@@ -450,19 +451,54 @@ a {
 .servicios__grid {
   display: grid;
   gap: 44px 32px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 72px;
+}
+@media (min-width: 900px) {
+  .servicios__grid { grid-template-columns: repeat(4, 1fr); }
 }
 
-/* Center last two cards in a row of 5 → use 6-col grid trick */
-@media (min-width: 900px) {
-  .servicios__grid {
-    grid-template-columns: repeat(6, 1fr);
-  }
-  .servicios__grid .servicio-card:nth-child(1) { grid-column: span 2; }
-  .servicios__grid .servicio-card:nth-child(2) { grid-column: span 2; }
-  .servicios__grid .servicio-card:nth-child(3) { grid-column: span 2; }
-  .servicios__grid .servicio-card:nth-child(4) { grid-column: 2 / span 2; }
-  .servicios__grid .servicio-card:nth-child(5) { grid-column: 4 / span 2; }
+/* Category headers */
+.servicios__cat-header {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  border-top: 1px solid var(--border);
+  padding-top: 32px;
+  margin-bottom: 44px;
+  margin-top: 16px;
+}
+.servicios__cat-num {
+  font-family: var(--font-label);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  color: var(--rose);
+}
+.servicios__cat-title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--dark);
+  line-height: 1.1;
+}
+
+/* Lash Lifting — horizontal featured block */
+.servicios__lash {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 72px;
+  padding: 44px;
+  background: var(--cream-mid);
+  border-radius: 4px;
+}
+@media (min-width: 700px) {
+  .servicios__lash { grid-template-columns: 360px 1fr; align-items: center; }
+}
+.servicios__lash-fig {
+  aspect-ratio: 4/3 !important;
+  margin-bottom: 0 !important;
 }
 
 .servicio-card { display: flex; flex-direction: column; }
@@ -1111,7 +1147,6 @@ a {
   .hero__title { font-size: clamp(3.5rem, 14vw, 6rem); }
 
   .servicios__grid { grid-template-columns: 1fr 1fr; }
-  .servicios__grid .servicio-card { grid-column: span 1 !important; }
 
   .about__inner {
     grid-template-columns: 1fr;
