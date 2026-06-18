@@ -9,16 +9,16 @@
 
 /* ─── Design tokens ─────────────────────────────────────── */
 :root {
-  --cream:       #FAF6F1;
-  --cream-mid:   #EDE5DA;
-  --cream-dark:  #DDD0C0;
+  --cream:       #f4f0e9;
+  --cream-mid:   #e9dfd8;
+  --cream-dark:  #e1dbd4;
   --dark:        #1A1614;
-  --brown:       #2C1A14;
+  --brown:       #603e35;
   --rose:        #6e041d;
   --rose-hover:  #8f0526;
-  --gold:        #C09270;
-  --gold-light:  #D4B08A;
-  --muted:       #7A6558;
+  --gold:        #603e35;
+  --gold-light:  #7a5248;
+  --muted:       #603e35;
   --border:      rgba(26, 22, 20, .10);
 
   --font-serif:  'Cormorant Garamond', Georgia, 'Times New Roman', serif;
