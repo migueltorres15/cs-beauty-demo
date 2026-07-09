@@ -207,11 +207,51 @@
     safe(initReveals,       "initReveals");
     safe(initGalleryHover,  "initGalleryHover");
     safe(initAgendaForm,    "initAgendaForm");
+    safe(initCarrusel,      "initCarrusel");
 
     /* GSAP features — only if library is loaded */
     if (window.gsap && window.ScrollTrigger) {
       safe(initHeroParallax, "initHeroParallax");
     }
+  }
+
+  function initCarrusel() {
+    const track  = document.getElementById('galTrack');
+    const prev   = document.getElementById('galPrev');
+    const next   = document.getElementById('galNext');
+    const dotsEl = document.getElementById('galDots');
+    if (!track) return;
+
+    const slides = track.querySelectorAll('.carrusel__slide');
+    const total  = slides.length;
+    let cur = 0;
+
+    // Build dots
+    slides.forEach((_, i) => {
+      const d = document.createElement('button');
+      d.className = 'carrusel__dot' + (i === 0 ? ' is-active' : '');
+      d.setAttribute('aria-label', 'Foto ' + (i + 1));
+      d.addEventListener('click', () => go(i));
+      dotsEl.appendChild(d);
+    });
+
+    function go(n) {
+      cur = (n + total) % total;
+      track.style.transform = `translateX(-${cur * 100}%)`;
+      dotsEl.querySelectorAll('.carrusel__dot').forEach((d, i) =>
+        d.classList.toggle('is-active', i === cur));
+    }
+
+    prev.addEventListener('click', () => go(cur - 1));
+    next.addEventListener('click', () => go(cur + 1));
+
+    // Swipe support
+    let startX = 0;
+    track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend',   e => {
+      const dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 50) go(dx < 0 ? cur + 1 : cur - 1);
+    });
   }
 
   /* Run after DOM is ready */

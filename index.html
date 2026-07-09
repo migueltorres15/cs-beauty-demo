@@ -26,8 +26,7 @@
   <nav class="nav" id="nav" aria-label="Navegación principal">
     <div class="nav__inner">
       <a href="#inicio" class="nav__logo" aria-label="CS Beauty — ir al inicio">
-        <span class="nav__logo-name">CS Beauty</span>
-        <span class="nav__logo-tag">makeup &amp; skin guru</span>
+        <img src="assets/img/logo.webp" alt="CS Beauty" class="nav__logo-img" />
       </a>
       <ul class="nav__links" role="list">
         <li><a href="#servicios">Servicios</a></li>
@@ -110,7 +109,7 @@
 
         <article class="servicio-card" data-reveal>
           <figure class="servicio-card__fig">
-            <img src="assets/img/foto-02.webp" alt="Faciales esenciales" loading="lazy" />
+            <img src="assets/img/faciales-esenciales.webp" alt="Faciales esenciales" loading="lazy" />
           </figure>
           <div class="servicio-card__body">
             <h3><em>Faciales Esenciales</em></h3>
@@ -130,7 +129,7 @@
 
         <article class="servicio-card" data-reveal>
           <figure class="servicio-card__fig">
-            <img src="assets/img/foto-10.webp" alt="Faciales premium alta gama" loading="lazy" />
+            <img src="assets/img/faciales-premium.webp" alt="Faciales premium alta gama" loading="lazy" />
           </figure>
           <div class="servicio-card__body">
             <h3><em>Faciales Premium</em></h3>
@@ -196,7 +195,7 @@
       </div>
       <div class="servicios__lash" data-reveal>
         <figure class="servicio-card__fig servicios__lash-fig">
-          <img src="assets/img/foto-14.webp" alt="Lash lift y tint — realce de pestañas" loading="lazy" />
+          <img src="assets/img/lashlift-01.webp" alt="Lash lift — realce de pestañas" loading="lazy" />
         </figure>
         <div class="servicio-card__body">
           <p>Eleva y define tu mirada. Resultados naturales que duran semanas sin mantenimiento diario. Sin extensiones ni pegamento — solo tus pestañas, realzadas.</p>
@@ -223,7 +222,7 @@
 
         <article class="servicio-card" data-reveal>
           <figure class="servicio-card__fig">
-            <img src="assets/img/foto-20.webp" alt="Maquillaje social y glam" loading="lazy" />
+            <img src="assets/img/maquillaje-social-glam.webp" alt="Maquillaje social y glam" loading="lazy" />
           </figure>
           <div class="servicio-card__body">
             <h3><em>Social &amp; Glam</em></h3>
@@ -244,7 +243,7 @@
 
         <article class="servicio-card" data-reveal>
           <figure class="servicio-card__fig">
-            <img src="assets/img/foto-04.webp" alt="Maquillaje artístico catrina" loading="lazy" />
+            <img src="assets/img/maquillaje-artistico.webp" alt="Maquillaje artístico" loading="lazy" />
           </figure>
           <div class="servicio-card__body">
             <h3><em>Artístico</em></h3>
@@ -265,7 +264,7 @@
 
         <article class="servicio-card" data-reveal>
           <figure class="servicio-card__fig">
-            <img src="assets/img/foto-17.webp" alt="Maquillaje de novia" loading="lazy" />
+            <img src="assets/img/novias-portada.webp" alt="Maquillaje de novia" loading="lazy" />
           </figure>
           <div class="servicio-card__body">
             <h3><em>Novias</em></h3>
@@ -319,41 +318,27 @@
         <h2 class="section-title" data-reveal id="galeria-h"><em>Galería</em></h2>
         <div class="section-rule" data-reveal aria-hidden="true"></div>
       </header>
-      <div class="galeria__grid">
-        <!-- Row 1 -->
-        <figure class="galeria__item galeria__item--tall2" data-reveal>
-          <img src="assets/img/foto-01.webp" alt="CS Beauty — retrato editorial" loading="lazy" />
-        </figure>
-        <figure class="galeria__item" data-reveal>
-          <img src="assets/img/foto-05.webp" alt="Catrina — detalle ojo con perlas" loading="lazy" />
-        </figure>
-        <figure class="galeria__item" data-reveal>
-          <img src="assets/img/foto-16.webp" alt="Sesión de maquillaje artístico" loading="lazy" />
-        </figure>
-        <!-- Row 2 (shares left col with row 1) -->
-        <figure class="galeria__item" data-reveal>
-          <img src="assets/img/foto-08.webp" alt="Detalle de maquillaje" loading="lazy" />
-        </figure>
-        <figure class="galeria__item" data-reveal>
-          <img src="assets/img/foto-19.webp" alt="Look editorial CS Beauty" loading="lazy" />
-        </figure>
-        <!-- Row 3 -->
-        <figure class="galeria__item galeria__item--wide" data-reveal>
-          <img src="assets/img/foto-20.webp" alt="Maquillaje glam — CS Beauty" loading="lazy" />
-        </figure>
-        <figure class="galeria__item" data-reveal>
-          <img src="assets/img/foto-11.webp" alt="Sesión de maquillaje" loading="lazy" />
-        </figure>
-        <!-- Row 4 -->
-        <figure class="galeria__item" data-reveal>
-          <img src="assets/img/foto-03.webp" alt="Novia Catrina en Los Cabos" loading="lazy" />
-        </figure>
-        <figure class="galeria__item" data-reveal>
-          <img src="assets/img/foto-18.webp" alt="Maquillaje de novia" loading="lazy" />
-        </figure>
-        <figure class="galeria__item" data-reveal>
-          <img src="assets/img/foto-15.webp" alt="Look de maquillaje CS Beauty" loading="lazy" />
-        </figure>
+      <div class="galeria__mosaico" data-reveal>
+        <figure class="galeria__item"><img src="assets/img/foto-01.webp" alt="CS Beauty galería" loading="lazy" /></figure>
+        <figure class="galeria__item"><img src="assets/img/foto-05.webp" alt="CS Beauty galería" loading="lazy" /></figure>
+        <figure class="galeria__item"><img src="assets/img/foto-16.webp" alt="CS Beauty galería" loading="lazy" /></figure>
+        <figure class="galeria__item"><img src="assets/img/foto-08.webp" alt="CS Beauty galería" loading="lazy" /></figure>
+        <figure class="galeria__item"><img src="assets/img/foto-19.webp" alt="CS Beauty galería" loading="lazy" /></figure>
+        <figure class="galeria__item"><img src="assets/img/foto-20.webp" alt="CS Beauty galería" loading="lazy" /></figure>
+        <figure class="galeria__item"><img src="assets/img/foto-11.webp" alt="CS Beauty galería" loading="lazy" /></figure>
+        <figure class="galeria__item"><img src="assets/img/foto-03.webp" alt="CS Beauty galería" loading="lazy" /></figure>
+        <figure class="galeria__item"><img src="assets/img/foto-18.webp" alt="CS Beauty galería" loading="lazy" /></figure>
+        <figure class="galeria__item"><img src="assets/img/foto-15.webp" alt="CS Beauty galería" loading="lazy" /></figure>
+        <figure class="galeria__item"><img src="assets/img/galeria-01.webp" alt="CS Beauty galería" loading="lazy" /></figure>
+        <figure class="galeria__item"><img src="assets/img/galeria-02.webp" alt="CS Beauty galería" loading="lazy" /></figure>
+        <figure class="galeria__item"><img src="assets/img/galeria-03.webp" alt="CS Beauty galería" loading="lazy" /></figure>
+        <figure class="galeria__item"><img src="assets/img/galeria-04.webp" alt="CS Beauty galería" loading="lazy" /></figure>
+        <figure class="galeria__item"><img src="assets/img/galeria-05.webp" alt="CS Beauty galería" loading="lazy" /></figure>
+        <figure class="galeria__item"><img src="assets/img/galeria-06.webp" alt="CS Beauty galería" loading="lazy" /></figure>
+        <figure class="galeria__item"><img src="assets/img/galeria-07.webp" alt="CS Beauty galería" loading="lazy" /></figure>
+        <figure class="galeria__item"><img src="assets/img/galeria-08.webp" alt="CS Beauty galería" loading="lazy" /></figure>
+        <figure class="galeria__item"><img src="assets/img/galeria-09.webp" alt="CS Beauty galería" loading="lazy" /></figure>
+        <figure class="galeria__item"><img src="assets/img/galeria-10.webp" alt="CS Beauty galería" loading="lazy" /></figure>
       </div>
     </div>
   </section>
